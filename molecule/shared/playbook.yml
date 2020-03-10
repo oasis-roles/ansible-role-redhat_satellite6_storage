@@ -3,4 +3,3 @@
   roles:
     - role: redhat_satellite6_storage
   post_tasks: []
-

@@ -22,7 +22,8 @@ satellite_lv_pulp_size: 300g
 satellite_lv_mongodb_size: 50g
 
 # Initial size of the /var/lib/qpidd volume.
-# The /var/lib/qpidd directory uses slightly more than 2 MB per Content Host managed by the goferd service.
+# The /var/lib/qpidd directory uses slightly
+# more than 2 MB per Content Host managed by the goferd service.
 # For example, 10 000 Content Hosts require 20 GB of disk space
 satellite_lv_qpidd_size: 10g
 

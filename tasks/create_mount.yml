@@ -4,7 +4,7 @@
     vg: "{{ satellite_vg }}"
     lv: "{{ lv }}"
     size: "{{ size }}"
-    force: yes
+    force: true
 
 - name: "Satellite Storage | Create File System for mount: {{ mount }}"
   filesystem:

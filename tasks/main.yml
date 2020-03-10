@@ -1,14 +1,14 @@
 ---
 - name: Satellite Storage | Verify satellite_type variable
   fail:
-    msg: "satellite_type must be one of ['master', 'capsule'] got '{{ satellite_type }}'"
+    msg: "satellite_type must be one of ['master', 'capsule']"
   when: satellite_type not in satellite_types
 
 - name: Satellite Storage | Install required packages
   package:
     name: "{{ item }}"
   with_items:
-  - lvm2
+    - lvm2
 
 - name: "Satellite Storage | Create {{ satellite_vg }} Volume Group"
   lvg:
@@ -19,18 +19,18 @@
   set_fact:
     mounts: "{{ satellite_master_mounts }}"
   when:
-  - satellite_type == "master"
+    - satellite_type == "master"
 
 - name: Satellite Storage | Determine mount points | Capsule
   set_fact:
     mounts: "{{ satellite_capsule_mounts }}"
   when:
-  - satellite_type == "capsule"
+    - satellite_type == "capsule"
 
 - name: Satellite Storage | Check if mount points already mounted
   command: "mountpoint {{ item.mount }}"
-  failed_when: False
-  changed_when: False
+  failed_when: false
+  changed_when: false
   register: mounts_stats
   when: ( item.size | regex_replace('^([0-9]*).*', '\\1') | int ) != 0
   with_items: "{{ mounts }}"
@@ -42,8 +42,8 @@
     size: "{{ item.0.size }}"
     mount: "{{ item.0.mount }}"
   when:
-  - ( item.0.size | regex_replace('^([0-9]*).*', '\\1') | int ) != 0
-  - item.1.rc != 0
+    - ( item.0.size | regex_replace('^([0-9]*).*', '\\1') | int ) != 0
+    - item.1.rc != 0
   with_together:
-  - "{{ mounts }}"
-  - "{{ mounts_stats.results }}"
+    - "{{ mounts }}"
+    - "{{ mounts_stats.results }}"

@@ -3,50 +3,50 @@
 # Satellite type, valid values:
 # master, capsule
 satellite_types:
-- 'master'
-- 'capsule'
+  - 'master'
+  - 'capsule'
 
 # list of mounts on Satellite Master
 satellite_master_mounts:
-- lv: pulp_cache
-  size: "{{ satellite_lv_pulp_cache_size }}"
-  mount: "/var/cache/pulp"
-- lv: pulp
-  size: "{{ satellite_lv_pulp_size }}"
-  mount: "/var/lib/pulp"
-- lv: mongodb
-  size: "{{ satellite_lv_mongodb_size }}"
-  mount: "/var/lib/mongodb"
-- lv: qpidd
-  size: "{{ satellite_lv_qpidd_size }}"
-  mount: "/var/lib/qpidd"
-- lv: pgsql
-  size: "{{ satellite_lv_pgsql_size }}"
-  mount: "/var/lib/pgsql"
-- lv: squid
-  size: "{{ satellite_lv_squid_size }}"
-  mount: "/var/spool/squid"
-- lv: puppetlabs
-  size: "{{ satellite_lv_puppetlabs_size }}"
-  mount: "/opt/puppetlabs"
-- lv: puppet_env
-  size: "{{ satellite_lv_puppet_env_size }}"
-  mount: "/etc/puppet/environment"
+  - lv: pulp_cache
+    size: "{{ satellite_lv_pulp_cache_size }}"
+    mount: "/var/cache/pulp"
+  - lv: pulp
+    size: "{{ satellite_lv_pulp_size }}"
+    mount: "/var/lib/pulp"
+  - lv: mongodb
+    size: "{{ satellite_lv_mongodb_size }}"
+    mount: "/var/lib/mongodb"
+  - lv: qpidd
+    size: "{{ satellite_lv_qpidd_size }}"
+    mount: "/var/lib/qpidd"
+  - lv: pgsql
+    size: "{{ satellite_lv_pgsql_size }}"
+    mount: "/var/lib/pgsql"
+  - lv: squid
+    size: "{{ satellite_lv_squid_size }}"
+    mount: "/var/spool/squid"
+  - lv: puppetlabs
+    size: "{{ satellite_lv_puppetlabs_size }}"
+    mount: "/opt/puppetlabs"
+  - lv: puppet_env
+    size: "{{ satellite_lv_puppet_env_size }}"
+    mount: "/etc/puppet/environment"
 
 # list of mounts on Satellite Capsule
 satellite_capsule_mounts:
-- lv: pulp_cache
-  size: "{{ satellite_lv_pulp_cache_size }}"
-  mount: "/var/cache/pulp"
-- lv: pulp
-  size: "{{ satellite_lv_pulp_size }}"
-  mount: "/var/lib/pulp"
-- lv: mongodb
-  size: "{{ satellite_lv_mongodb_size }}"
-  mount: "/var/lib/mongodb"
-- lv: puppetlabs
-  size: "{{ satellite_lv_puppetlabs_size }}"
-  mount: "/opt/puppetlabs"
-- lv: puppet_env
-  size: "{{ satellite_lv_puppet_env_size }}"
-  mount: "/etc/puppet/environment"
+  - lv: pulp_cache
+    size: "{{ satellite_lv_pulp_cache_size }}"
+    mount: "/var/cache/pulp"
+  - lv: pulp
+    size: "{{ satellite_lv_pulp_size }}"
+    mount: "/var/lib/pulp"
+  - lv: mongodb
+    size: "{{ satellite_lv_mongodb_size }}"
+    mount: "/var/lib/mongodb"
+  - lv: puppetlabs
+    size: "{{ satellite_lv_puppetlabs_size }}"
+    mount: "/opt/puppetlabs"
+  - lv: puppet_env
+    size: "{{ satellite_lv_puppet_env_size }}"
+    mount: "/etc/puppet/environment"

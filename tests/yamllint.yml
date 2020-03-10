@@ -8,4 +8,3 @@ rules:
     level: error
   comments:
     require-starting-space: false
-
