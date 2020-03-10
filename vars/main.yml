@@ -1,7 +1,12 @@
+# Vars for redhat_satellite6_storage
+
+# Satellite type, valid values:
+# master, capsule
 satellite_types:
 - 'master'
 - 'capsule'
 
+# list of mounts on Satellite Master
 satellite_master_mounts:
 - lv: pulp_cache
   size: "{{ satellite_lv_pulp_cache_size }}"
@@ -28,6 +33,7 @@ satellite_master_mounts:
   size: "{{ satellite_lv_puppet_env_size }}"
   mount: "/etc/puppet/environment"
 
+# list of mounts on Satellite Capsule
 satellite_capsule_mounts:
 - lv: pulp_cache
   size: "{{ satellite_lv_pulp_cache_size }}"

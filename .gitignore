@@ -1,3 +1,7 @@
-*.retry
-*.swp
-__pycache__
+.*.swp
+.*.swo
+*.pyc
+*.pyo
+__pycache__/*
+molecule/*/junit.xml
+molecule/*/pytestdebug.log
