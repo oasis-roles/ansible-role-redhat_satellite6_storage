@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/oasis-roles/{{ redhat_satellite6_storage }}.svg?branch=master)](https://travis-ci.com/oasis-roles/{{ redhat_satellite6_storage }})
+[![Build Status](https://travis-ci.com/oasis-roles/ansible-role-redhat_satellite6_storage.svg?branch=master)](https://travis-ci.com/oasis-roles/ansible-role-redhat_satellite6_storage)
 
 # redhat\_satellite6\_storage
 
