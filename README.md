@@ -60,10 +60,20 @@ None
 
 ## Example Playbook
 
+Simple example:
 ```yaml
 - hosts: satellite-servers
   roles:
     - role: oasis_roles.satellite_storage
+```
+
+Additional example with different hard disk and pulp size:
+```yaml
+- hosts: satellite-servers
+  roles:
+    - role: oasis_roles.satellite_storage
+      satellite_pvs: /dev/vdb
+      satellite_lv_pulp_size: 800g
 ```
 
 ## License
