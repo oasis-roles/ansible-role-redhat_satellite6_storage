@@ -1,4 +1,4 @@
-# Vars for redhat_satellite6_storage
+# Vars for satellite_storage
 
 # Satellite type, valid values:
 # master, capsule

@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/oasis-roles/ansible-role-redhat_satellite6_storage.svg?branch=master)](https://travis-ci.com/oasis-roles/ansible-role-redhat_satellite6_storage)
 
-# redhat\_satellite6\_storage
+# satellite\_storage
 
 An Ansible role for configuring logical volumes and mount points for Red Hat Satellite Server(s) and Capsule(s). Of course, it's also compatible with Foreman and Katello.
 
@@ -18,9 +18,9 @@ This role doesn't pay attention if the mount points already exist or not, it wil
 Currently the following variables are supported:
 
 ### General
-* `redhat_satellite6_storage_become` - Default: true. If this role needs administrator
+* `satellite_storage_become` - Default: true. If this role needs administrator
   privileges, then use the Ansible become functionality (based off sudo).
-* `redhat_satellite6_storage_become_user` - Default: root. If the role uses the become
+* `satellite_storage_become_user` - Default: root. If the role uses the become
   functionality for privilege escalation, then this is the name of the target
   user to change to.
 
@@ -63,7 +63,7 @@ None
 ```yaml
 - hosts: satellite-servers
   roles:
-    - role: oasis_roles.redhat_satellite6_storage
+    - role: oasis_roles.satellite_storage
 ```
 
 ## License

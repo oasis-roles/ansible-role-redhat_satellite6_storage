@@ -1,6 +1,6 @@
 # normal become vars
-redhat_satellite6_storage_become: true
-redhat_satellite6_storage_user: root
+satellite_storage_become: true
+satellite_storage_user: root
 
 # Physical volume(s) to use for Satellite storage
 satellite_pvs: /dev/sdb
